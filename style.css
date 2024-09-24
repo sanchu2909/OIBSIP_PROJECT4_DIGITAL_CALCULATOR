@@ -1,0 +1,83 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #202873, #ffc3a0);
+
+}
+
+.calculator {
+    background-color:rgb(7, 7, 61);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(213, 209, 209, 0.1);
+    width: 300px;
+}
+
+.display {
+    background-color: #333;
+    color: #fff;
+    font-size: 2em;
+    text-align: right;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 1.5em;
+    background-color:lightpink;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #653152;
+}
+
+
+#clear {
+    background-color: #f44336;
+    color: white;
+    grid-column: 1 / 3; /* Spanning over 2 columns */
+}
+
+#equals {
+    background-color: #4caf50;
+    color: white;
+    grid-column: 3 / 5; /* Spanning over 2 columns */
+}
+
+#divide, #multiply, #subtract, #add {
+    background-color: #f1c40f;
+}
+
+/* Adjusting layout of number and decimal buttons */
+.num {
+    background-color: #fff;
+}
+
+/* Adjusting the 0 and decimal buttons to fill the gap */
+#decimal {
+    grid-column: 3/ 5; /* Placed in the third column */
+    grid-row: 5; /* Placed in the fifth row */
+}
+
+.btn.num:nth-last-child(1) { /* Select the last number button (0) */
+    grid-column: 4; /* Place 0 in the fourth column */
+    grid-row: 5; /* Place in the same row as the decimal */
+}
+
+
